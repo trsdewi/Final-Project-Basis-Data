@@ -9,7 +9,7 @@ $jenis=$_POST['jenis'];
 $satuan=$_POST['satuan'];
 $stock=$_POST['stock'];
 	  
-$query = mysqli_query($conn,"insert into sstock_brg values('','$id','$kode_barang','$nama_barang','$id_supplier','$jenis','$satuan','$stock')");
+$query = mysqli_query($conn,"insert into barang values('','$id','$kode_barang','$nama_barang','$id_supplier','$jenis','$satuan','$stock')");
 if ($query){
 
 echo " <div class='alert alert-success'>
