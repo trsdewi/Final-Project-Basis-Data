@@ -133,6 +133,13 @@ CREATE TABLE `customer` (
   `telepon` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id_penerima`, `nama_penerima`, `alamat`, `telepon`) VALUES
+(123, 'tresna', 'tabanan', '782');
+
 -- --------------------------------------------------------
 
 --
