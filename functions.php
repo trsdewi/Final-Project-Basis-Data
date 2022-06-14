@@ -145,4 +145,31 @@ function keluar($data){
 	return mysqli_affected_rows($connect);
  }
 
+ function tambahcust($data){
+	global $connect;
+	
+   $nama_penerima = htmlspecialchars($data["nama_penerima"]);
+   $alamat = htmlspecialchars($data["alamat"]);
+   $telepon = htmlspecialchars($data["telepon"]);
+
+   $query = "INSERT INTO customer VALUES
+   ('', '$nama_penerima', '$alamat', '$telepon')";
+   mysqli_query($connect, $query);
+
+   return mysqli_affected_rows($connect);
+}
+
+function tambahsupp($data){
+	global $connect;
+	
+   $nama_supplier = htmlspecialchars($data["nama_supplier"]);
+   $alamat = htmlspecialchars($data["alamat"]);
+   $telepon = htmlspecialchars($data["telepon"]);
+
+   $query = "INSERT INTO supplier VALUES
+   ('', '$nama_supplier', '$alamat', '$telepon')";
+   mysqli_query($connect, $query);
+
+   return mysqli_affected_rows($connect);
+
  ?>
