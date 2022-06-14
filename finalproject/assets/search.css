@@ -1,0 +1,41 @@
+.box{
+    position: relative;
+    top: 45%;
+    right: 30%;
+    width: 200px;
+    margin: auto;
+    z-index: 1;
+}
+input{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+    outline: none;
+}
+input[type="text"]{
+    background: #fff;
+    width: 500px;
+    height: 45px;
+    border: 1px solid #1e1e1e;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+    : ;
+}
+input[type="submit"]{
+    position: relative;
+    left: -10px;
+    border-radius: 0 25px 25px 0;
+    width: 100px;
+    height: 45px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #ffc107;
+    color: #fff;
+}
+input[type="submit"]:hover{
+    background: #ff5722;
+}
