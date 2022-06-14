@@ -171,5 +171,5 @@ function tambahsupp($data){
    mysqli_query($connect, $query);
 
    return mysqli_affected_rows($connect);
-
+}
  ?>
