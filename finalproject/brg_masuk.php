@@ -3,6 +3,9 @@
 require 'functions.php';
 $brgmasuk = query("SELECT * FROM brg_masuk");
 
+if ( isset($_POST["carimasuk"])) {
+	$brgmasuk = carimasuk($_POST["key"]);
+}
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +63,7 @@ $brgmasuk = query("SELECT * FROM brg_masuk");
 	<form action="" method="post"class="box">
 
 		<input type="text" name="key" autofocus placeholder="Masukkan keyword pencarian" autocomplete="off" id="key">
-		<input type="submit" name="cari" id="cari" value="Search">
+		<input type="submit" name="carimasuk" id="carimasuk" value="Search">
 
 	</form>
 
