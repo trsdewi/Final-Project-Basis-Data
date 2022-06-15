@@ -37,45 +37,60 @@ if (isset($_POST["submit"])) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Update Data Barang</title>
-</head>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head class="form">
+	<div class="wrap">
+		<div class="container2">
 <body>
 	<h1>Update Data Barang</h1>
 	<form action="" method="post">
 		<input type="hidden" name="id" value="<?php echo $brg["id"]; ?>">
-		<ul>
-			<li>
-				<label for="kode_barang">Kode Barang	: </label>
-					<input type="text" name="kode_barang" id="kode_barang" value="<?php echo $brg["kode_barang"];  ?>">
-			</li>
-			<li>
-				<label for="nama_barang">Nama Barang	: </label>
-					<input type="text" name="nama_barang" id="nama_barang" value="<?php echo $brg["nama_barang"]; ?>">
-			</li>
-			<li>
-				<label for="id_supplier">ID Supplier	: </label>
-					<input type="text" name="id_supplier" id="id_supplier" value="<?php echo $brg["id_supplier"] ?>">
-			</li>
-			<li>
-				<label for="kategori">Kategori	: </label>
-					<input type="text" name="kategori" id="kategori" value="<?php echo $brg["kategori"] ?>">
-			</li>
-			<li>
-				<label for="satuan">Satuan	: </label>
-					<input type="text" name="satuan" id="satuan" value="<?php echo $brg["satuan"] ?>">
-			</li>
-			<li>
-				<label for="stock">Stock	: </label>
-					<input type="text" name="stock" id="stock" value="<?php echo $brg["stock"] ?>">
-			</li>
-			<li>
-				<label for="harga_satuan">Harga Satuan	: </label>
-					<input type="text" name="harga_satuan" id="harga_satuan" value="<?php echo $brg["harga_satuan"] ?>">
-			</li>
-			<li>
-				<button type="submit" name="submit">Update Data</button>
-			</li>
-		</ul>
-		
+		<table>
+			<tr>
+				<td>Kode Barang</td>
+				<td>:</td>
+				<td><input type="text" name="kode_barang" id="kode_barang" ></td>
+			</tr>
+			<tr>
+				<td>Nama Barang</td>
+				<td>:</td>
+				<td><input type="text" name="nama_barang" id="nama_barang"></td>
+			</tr>
+			<tr>
+				<td>ID Supplier</td>
+				<td>:</td>
+				<td><input type="text" name="id_supplier" id="id_supplier"></td>
+			</tr>
+			<tr>
+				<td>Kategori</td>
+				<td>:</td>
+				<td><input type="text" name="kategori" id="kategori"></td>
+			</tr>
+			<tr>
+				<td>Satuan</td>
+				<td>:</td>
+				<td><input type="text" name="satuan" id="satuan"></td>
+			</tr>
+			<tr>
+				<td>Jumlah</td>
+				<td>:</td>
+				<td><input type="text" name="stock" id="stock"></td>
+			</tr>
+			<tr>
+				<td>Harga Satuan</td>
+				<td>:</td>
+				<td><input type="text" name="harga_satuan" id="harga_satuan"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td>
+					<button type="submit" name="submit">Tambah</button>
+					<button type="submit" name="batal">Batal</button>
+				</td>
+			</tr>
+		</table>
 	</form>
 
 </body>
