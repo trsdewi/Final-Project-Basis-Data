@@ -11,6 +11,7 @@ $brgmasuk = query("SELECT * FROM brg_masuk");
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Barang Masuk</title>
+	<link rel="stylesheet" href="assets/css/search.css">
 	<link rel="stylesheet" href="assets/css/sidebar.css">
 	<link rel="stylesheet" href="assets/css/table.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -54,15 +55,17 @@ $brgmasuk = query("SELECT * FROM brg_masuk");
 	</script>
 
 	<h1>Daftar Barang Masuk</h1>
-	<a href="masuk.php">Tambah</a>
 	<br><br>
 
-	<form action="" method="post">
+	<form action="" method="post"class="box">
 
-		<input type="text" name="key" size="60" autofocus placeholder="Masukkan keyword pencarian" autocomplete="off">
-		<button type="submit" name="cari">Cari!</button>
+		<input type="text" name="key" autofocus placeholder="Masukkan keyword pencarian" autocomplete="off" id="key">
+		<input type="submit" name="cari" id="cari" value="Search">
 
 	</form>
+
+	<br><br>
+	<a href="masuk.php">Tambah</a>
 
 	<br><br>
 
