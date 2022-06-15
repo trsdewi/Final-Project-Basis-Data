@@ -49,19 +49,19 @@ if (isset($_POST["submit"])) {
 				<td><input type="text" name="tanggal" id="tanggal"></td>
 			</tr>
 			<tr>
-				<td>Kode Barang</td>
-				<td>:</td>
-				<td><input type="text" name="kode_barang" id="kode_barang"></td>
-			</tr>
-			<tr>
 				<td>Nama Barang</td>
 				<td>:</td>
 				<td><input type="text" name="nama_barang" id="nama_barang"></td>
 			</tr>
 			<tr>
-				<td>Supplier</td>
+				<td>Kategori</td>
 				<td>:</td>
-				<td><input type="text" name="supplier" id="supplier"></td>
+				<td><input type="text" name="kategori" id="kategori"></td>
+			</tr>
+			<tr>
+				<td>Customer</td>
+				<td>:</td>
+				<td><input type="text" name="customer" id="customer"></td>
 			</tr>
 			<tr>
 				<td>Jumlah</td>
@@ -77,7 +77,7 @@ if (isset($_POST["submit"])) {
 				<td></td>
 				<td></td>
 				<td>
-					<button type="submit" name="submit">Tambah</button>
+				<button type="submit" name="submit">Tambah</button>
 					<button type="submit" name="batal">Batal</button>
 				</td>
 			</tr>
