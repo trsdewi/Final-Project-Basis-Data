@@ -88,11 +88,6 @@ $cust = query("SELECT * FROM customer");
 <?php endforeach; ?>
 	</table>
 
-	<br><br> 
-	<a href="stockbarang.php">Stock Barang</a>
-
-	<br><br> 
-	<a href="logout.php">Logout</a>
 </body>
 </html>
 
