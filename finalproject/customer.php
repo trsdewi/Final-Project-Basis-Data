@@ -10,7 +10,8 @@ $cust = query("SELECT * FROM customer");
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Barang Masuk</title>
+	<title> Customer</title>
+	<link rel="stylesheet" href="assets/css/search.css">
 	<link rel="stylesheet" href="assets/css/sidebar.css">
 	<link rel="stylesheet" href="assets/css/table.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -54,21 +55,23 @@ $cust = query("SELECT * FROM customer");
 	</script>
 
 	<h1>Daftar Customer</h1>
-    <a href="tambahcust.php">Tambah</a>
 	<br><br>
 
-	<form action="" method="post">
+	<form action="" method="post"class="box">
 
-		<input type="text" name="key" size="60" autofocus placeholder="Masukkan keyword pencarian" autocomplete="off">
-		<button type="submit" name="cari">Cari!</button>
+		<input type="text" name="key" autofocus placeholder="Masukkan keyword pencarian" autocomplete="off" id="key">
+		<input type="submit" name="cari" id="cari" value="Search">
 
 	</form>
+
+	<br><br>
+	<a href="tambahcust.php">Tambah</a>
 
 	<br><br>
 
 	<table class="table1">
 	<tr>
-        <th>No.</th>
+        	<th>No.</th>
 		<th>ID Penerima</th>
 		<th>Nama Penerima</th>
 		<th>Alamat</th>
