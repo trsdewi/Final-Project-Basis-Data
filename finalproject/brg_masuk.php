@@ -74,8 +74,8 @@ $brgmasuk = query("SELECT * FROM brg_masuk");
 		<th>No.</th>
 		<th>ID Transaksi</th>
 		<th>Tanggal</th>
-		<th>Kode Barang</th>
 		<th>Nama Barang</th>
+		<th>Kategori</th>
 		<th>Supplier</th>
 		<th>Jumlah</th>
 		<th>Satuan</th>
@@ -87,8 +87,8 @@ $brgmasuk = query("SELECT * FROM brg_masuk");
 		<td><?php echo $i ?></td>
 		<td><?php echo $row["id_transaksi"] ?></td>
 		<td><?php echo $row["tanggal"] ?></td>
-		<td><?php echo $row["kode_barang"] ?></td>
 		<td><?php echo $row["nama_barang"] ?></td>
+		<td><?php echo $row["kategori"] ?></td>
 		<td><?php echo $row["supplier"] ?></td>
 		<td><?php echo $row["jumlah"] ?></td>
 		<td><?php echo $row["satuan"] ?></td>
@@ -100,63 +100,3 @@ $brgmasuk = query("SELECT * FROM brg_masuk");
 	
 </body>
 </html>
-
-<?php /*
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Barang Masuk</title>
-</head>
-<body>
-	<h1>Daftar Barang Masuk</h1>
-	<a href="masuk.php">Tambah</a>
-	<br><br>
-
-	<form action="" method="post">
-
-		<input type="text" name="key" size="60" autofocus placeholder="Masukkan keyword pencarian" autocomplete="off">
-		<button type="submit" name="cari">Cari!</button>
-
-	</form>
-
-	<br><br>
-
-	<table border="1" cellpadding="10" cellspacing="0">
-	<tr>
-		<th>No.</th>
-		<th>ID Transaksi</th>
-		<th>Tanggal</th>
-		<th>Kode Barang</th>
-		<th>Nama Barang</th>
-		<th>Supplier</th>
-		<th>Jumlah</th>
-		<th>Satuan</th>
-	</tr>
-
-	<?php $i = 1; ?>
-	<?php foreach ($brgmasuk as $row) : ?>
-	<tr>
-		<td><?php echo $i ?></td>
-		<td><?php echo $row["id_transaksi"] ?></td>
-		<td><?php echo $row["tanggal"] ?></td>
-		<td><?php echo $row["kode_barang"] ?></td>
-		<td><?php echo $row["nama_barang"] ?></td>
-		<td><?php echo $row["supplier"] ?></td>
-		<td><?php echo $row["jumlah"] ?></td>
-		<td><?php echo $row["satuan"] ?></td>
-		
-	</tr>
-	<?php $i++; ?>
-<?php endforeach; ?>
-	</table>
-
-	<br><br> 
-	<a href="stockbarang.php">Stock Barang</a>
-
-	<br><br> 
-	<a href="logout.php">Logout</a>
-</body>
-</html>
-*/?>
