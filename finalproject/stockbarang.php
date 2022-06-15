@@ -181,7 +181,6 @@ if ( isset($_POST["cari"])) {
 
 	<br>
 	<h1>Daftar Barang</h1>
-	<a href="tambah.php">Tambah data barang</a>
 	<br><br>
 
 	
@@ -191,8 +190,10 @@ if ( isset($_POST["cari"])) {
 		<input type="submit" name="cari" id="cari" value="Search">
 	</form>
 	
+	<br><br>
+	<a href="tambah.php">Tambah data barang</a>
 
-	<br>
+	<br><br>
 	<div id="container">
 	<table class="table1">
 	<tr>
