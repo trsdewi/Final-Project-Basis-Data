@@ -10,8 +10,9 @@ $supp = query("SELECT * FROM supplier");
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Barang Masuk</title>
+	<title> Suppliers</title>
 	<link rel="stylesheet" href="assets/css/sidebar.css">
+	<link rel="stylesheet" href="assets/css/table.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -65,7 +66,7 @@ $supp = query("SELECT * FROM supplier");
 
 	<br><br>
 
-	<table border="1" cellpadding="10" cellspacing="0">
+	<table class="table1">
 	<tr>
         <th>No.</th>
 		<th>ID Supplier</th>
@@ -87,11 +88,6 @@ $supp = query("SELECT * FROM supplier");
 <?php endforeach; ?>
 	</table>
 
-	<br><br> 
-	<a href="stockbarang.php">Stock Barang</a>
-
-	<br><br> 
-	<a href="logout.php">Logout</a>
 </body>
 </html>
 
