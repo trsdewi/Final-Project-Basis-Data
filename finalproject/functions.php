@@ -82,6 +82,28 @@ function query($query){
  	return query($query);
  }
 
+function carikeluar($key){
+	$query = "SELECT * FROM brg_keluar WHERE id_transaksi LIKE '%$key%' OR tanggal LIKE '%$key%' OR kode_barang LIKE '%$key%' OR nama_barang LIKE '%$key%' OR customer LIKE '%$key%' OR jumlah LIKE '%$key%' OR satuan LIKE '%$key%' 
+	";
+	return query($query);
+}
+
+function carimasuk($key){
+	$query = "SELECT * FROM brg_masuk WHERE id_transaksi LIKE '%$key%' OR tanggal LIKE '%$key%' OR kode_barang LIKE '%$key%' OR nama_barang LIKE '%$key%' OR supplier LIKE '%$key%' OR jumlah LIKE '%$key%' OR satuan LIKE '%$key%' 
+	";
+	return query($query);
+}
+
+function caricust($key){
+	$query = "SELECT * FROM customer WHERE id_penerima LIKE '%$key%' OR nama_penerima LIKE '%$key%' OR alamat LIKE '%$key%' OR telepon LIKE '%$key%'";
+	return query($query);
+}
+
+function carisupp($key){
+	$query = "SELECT * FROM supplier WHERE id_supplier LIKE '%$key%' OR nama_supplier LIKE '%$key%' OR alamat LIKE '%$key%' OR telepon LIKE '%$key%'";
+	return query($query);
+}
+
  function update($data){
  	global $connect;
 
