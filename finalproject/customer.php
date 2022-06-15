@@ -3,6 +3,10 @@
 require 'functions.php';
 $cust = query("SELECT * FROM customer");
 
+if ( isset($_POST["caricust"])) {
+	$cust = caricust($_POST["key"]);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +18,7 @@ $cust = query("SELECT * FROM customer");
 	<link rel="stylesheet" href="assets/css/search.css">
 	<link rel="stylesheet" href="assets/css/sidebar.css">
 	<link rel="stylesheet" href="assets/css/table.css">
+	<link rel="stylesheet" href="assets/css/button.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -35,7 +40,6 @@ $cust = query("SELECT * FROM customer");
 			</li>
 			<li><a href="supplier.php">Suppliers</a></li>
 			<li><a href="customer.php">Customer</a></li>
-			<li><a href="kategori.php">Kategori</a></li>
 			<li><a href="logout.php">Logout</a></li>
 		</ul>
 	</nav>
@@ -54,28 +58,30 @@ $cust = query("SELECT * FROM customer");
 		})
 	</script>
 
+	<br>
 	<h1>Daftar Customer</h1>
 	<br><br>
 
 	<form action="" method="post"class="box">
 
 		<input type="text" name="key" autofocus placeholder="Masukkan keyword pencarian" autocomplete="off" id="key">
-		<input type="submit" name="cari" id="cari" value="Search">
+		<input type="submit" name="caricust" id="caricust" value="Search">
 
 	</form>
 
 	<br><br>
-	<a href="tambahcust.php">Tambah</a>
+	<a href="tambahcust.php" class="tombol1">Tambah</a>
 
 	<br><br>
 
 	<table class="table1">
 	<tr>
-        	<th>No.</th>
+        <th>No.</th>
 		<th>ID Penerima</th>
 		<th>Nama Penerima</th>
 		<th>Alamat</th>
 		<th>Telepon</th>
+		<th>Aksi</th>
 	</tr>
 
 	<?php $i = 1; ?>
@@ -86,6 +92,10 @@ $cust = query("SELECT * FROM customer");
 		<td><?php echo $row["nama_penerima"] ?></td>
 		<td><?php echo $row["alamat"] ?></td>
 		<td><?php echo $row["telepon"] ?></td>
+		<td>
+			<a href="updatecust.php?id= <?php echo $row["id_penerima"]; ?>">ubah</a> | 
+			<a href="deletecust.php?id=<?= $row["id_penerima"]; ?>"> delete</a>
+		</td>
 	</tr>
 	<?php $i++; ?>
 <?php endforeach; ?>
