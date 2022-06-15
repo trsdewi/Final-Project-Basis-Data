@@ -12,6 +12,7 @@ $cust = query("SELECT * FROM customer");
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> Barang Masuk</title>
 	<link rel="stylesheet" href="assets/css/sidebar.css">
+	<link rel="stylesheet" href="assets/css/table.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -65,7 +66,7 @@ $cust = query("SELECT * FROM customer");
 
 	<br><br>
 
-	<table border="1" cellpadding="10" cellspacing="0">
+	<table class="table1">
 	<tr>
         <th>No.</th>
 		<th>ID Penerima</th>
