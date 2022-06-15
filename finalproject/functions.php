@@ -112,16 +112,16 @@ function query($query){
 function keluar($data){
  	global $connect;
 
- 	$id_transaksi = htmlspecialchars($data["id_transaksi"]);
+ 	id_transaksi = htmlspecialchars($data["id_transaksi"]);
 	$tanggal = $data["tanggal"];
-	$kode_barang = htmlspecialchars($data["kode_barang"]);
 	$nama_barang = htmlspecialchars($data["nama_barang"]);
+	$kategori = htmlspecialchars($data["kategori"]);
 	$customer = htmlspecialchars($data["customer"]);
 	$jumlah = $data["jumlah"];
 	$satuan = htmlspecialchars($data["satuan"]);
 
 	$query = "INSERT INTO brg_keluar VALUES
-	('', '$id_transaksi', '$tanggal', '$kode_barang', '$nama_barang', '$customer', $jumlah, '$satuan')";
+	('', '$id_transaksi', '$tanggal', '$nama_barang','$kode_barang' ,'$customer', $jumlah, '$satuan')";
 	mysqli_query($connect, $query);
 
 	return mysqli_affected_rows($connect);
@@ -132,14 +132,14 @@ function keluar($data){
 
  	$id_transaksi = htmlspecialchars($data["id_transaksi"]);
 	$tanggal = $data["tanggal"];
-	$kode_barang = htmlspecialchars($data["kode_barang"]);
 	$nama_barang = htmlspecialchars($data["nama_barang"]);
+	$kategori = htmlspecialchars($data["kategori"]);
 	$supplier = htmlspecialchars($data["supplier"]);
 	$jumlah = $data["jumlah"];
 	$satuan = htmlspecialchars($data["satuan"]);
 
 	$query = "INSERT INTO brg_masuk VALUES
-	('', '$id_transaksi', '$tanggal', '$kode_barang', '$nama_barang', '$supplier', $jumlah, '$satuan')";
+	('', '$id_transaksi', '$tanggal', '$nama_barang', 'kategori' '$supplier', $jumlah, '$satuan')";
 	mysqli_query($connect, $query);
 
 	return mysqli_affected_rows($connect);
